@@ -1,0 +1,70 @@
+*{
+    font-family: 'Outfit', sans-serif;
+}
+
+#user-input {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+#user-input input, #user-input button{
+    padding: 15px;
+    border: 1px solid #f5b916;
+}
+
+#user-input button{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    background-color: #ffd35c ;
+}
+
+#user-input input:focus{
+    outline: none;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.recipe{
+    padding: 10px;
+    text-align: center;
+
+}
+
+.recipe .title{
+    font-family: 'Ceviche One', cursive;
+    font-size: 25px;
+    color:  black;
+    font-weight: bold;
+}
+
+.recipe .title:hover{
+    color: #f5b916;
+}
+
+.recipe img{
+    width: 60%;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.54); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.54);
+}
+
+.recipe a {
+    display: block;
+    text-decoration: none;
+}
+
+ul li{
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+    #results {
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+    
+  }

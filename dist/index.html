@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Comforter+Brush&family=Lobster&family=Outfit:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipes</title>
+</head>
+
+<body>
+    <div id="user-input">
+        <input type="text" placeholder="Enter a ingredient">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <div id="results"></div>
+
+
+    <script id="recipes-template" type="text/x-handlebars">
+        <!-- {{#each recipes}} -->
+    <div class="recipe">
+        <a class="title" href="{{this.href}}">{{this.title}}</a>
+        <ul>
+            {{#each this.ingredients}}
+            <li>'{{this}}'</li>
+            {{/each}}
+        </ul>
+        <!-- <h4></h4> -->
+        <h4>{{this.pos}}</h4>
+        <img src="{{thumbnail}}" alt="">
+    </div>
+    <!-- {{/each}} -->
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
